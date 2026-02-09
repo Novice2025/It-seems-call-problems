@@ -54,21 +54,40 @@
         .subtitle { 
             color: var(--text-muted); 
             font-size: 0.9rem; 
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .mission-text {
             color: var(--accent);
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 1.2rem;
+            font-weight: 600;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 10px auto;
             line-height: 1.4;
-            font-style: italic;
-            opacity: 0.9;
         }
+
+        .tagline {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+
+        .immersion-tip {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            text-align: left;
+            border: 1px solid var(--border);
+            margin-top: 10px;
+        }
+        .immersion-tip p { margin: 8px 0; font-weight: 500; font-size: 1.1rem; letter-spacing: 0.5px; }
 
         /* Navigation Tabs */
         .nav-container {
@@ -111,117 +130,155 @@
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .intro-section {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            margin-bottom: 30px;
-        }
-
-        .intro-title { color: var(--accent); font-size: 1.8rem; margin-bottom: 15px; }
-        .intro-text { font-size: 1.1rem; color: #ddd; margin-bottom: 20px; }
+        .intro-section { margin-bottom: 3rem; }
+        .intro-title { font-size: 1.8rem; color: var(--accent); margin-bottom: 1rem; }
+        .intro-text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
 
         /* Brazil Tip Box */
         .brazil-box {
-            background: rgba(0, 156, 59, 0.1);
-            border-left: 4px solid var(--brazil-green);
-            padding: 15px;
-            margin: 20px 0;
+            background: rgba(255, 204, 0, 0.1);
+            border-left: 4px solid var(--brazil-yellow);
+            padding: 1.5rem;
             border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
         }
-        .brazil-title { color: var(--brazil-green); font-weight: bold; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
-        .brazil-text { color: #ccc; font-size: 0.95rem; }
+        .brazil-title { color: var(--brazil-yellow); font-weight: bold; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px; }
+        .brazil-text { color: #ddd; font-style: italic; }
 
         /* Diagrams */
         .diagram-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            overflow-x: auto;
-            position: relative;
-        }
-        .diagram-label {
-            position: absolute;
-            top: 5px;
-            left: 10px;
-            font-size: 0.7rem;
-            color: #333;
-            font-weight: bold;
-            text-transform: uppercase;
-            opacity: 0.5;
-        }
-
-        /* Tables */
-        .table-container { overflow-x: auto; margin-top: 20px; }
-        .comparison-table { width: 100%; border-collapse: collapse; min-width: 600px; }
-        .comparison-table th, .comparison-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-        .comparison-table th { color: var(--accent); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
-        .comparison-table td { color: #ccc; }
-        .comparison-table tr:hover { background: rgba(255,255,255,0.02); }
-
-        /* Scenarios Grid */
-        .scenarios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .scenario-card {
             background: var(--bg-card);
-            border: 1px solid var(--border);
             padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-        .scenario-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .scenario-title { color: var(--accent); font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-        .scenario-text { font-size: 1.1rem; color: #fff; margin-bottom: 8px; font-style: italic; }
-        .scenario-pt { color: var(--text-muted); font-size: 0.9rem; }
-        .scenario-context { margin-top: 10px; font-size: 0.85rem; color: var(--power-color); border-top: 1px solid var(--border); padding-top: 8px; }
-
-        /* Exercise Section */
-        .exercise-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0f1115 100%);
-            padding: 30px;
             border-radius: 12px;
+            margin: 2rem 0;
             border: 1px solid var(--border);
             text-align: center;
         }
-        .prompt { font-size: 1.2rem; margin-bottom: 20px; color: #fff; }
+        .diagram-label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* Tables */
+        .table-container { overflow-x: auto; margin: 2rem 0; border-radius: 8px; border: 1px solid var(--border); }
+        .comparison-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .comparison-table th, .comparison-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        .comparison-table th { background: rgba(255,255,255,0.05); color: var(--accent); text-transform: uppercase; font-size: 0.85rem; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: rgba(255,255,255,0.02); }
+
+        /* NEON TABLE STYLES */
+        .neon-table-container {
+            margin-top: 3rem;
+            background: #000;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.05);
+        }
+        .neon-title {
+            font-size: 1.5rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--accent);
+        }
+        .neon-table { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
+        .neon-table tr { background: #111; transition: transform 0.2s; }
+        .neon-table tr:hover { transform: scale(1.01); background: #161616; }
+        .neon-table td { padding: 15px; border: 1px solid #222; }
+
+        .neon-situation { color: #ff00aa; font-weight: bold; border-left: 3px solid #ff00aa; } /* Neon Pink */
+        .neon-english { color: #00ff9d; font-weight: 500; } /* Neon Green */
+        .neon-pt { color: #00ccff; font-style: italic; opacity: 0.9; } /* Neon Blue */
+
+        /* Scenarios Grid */
+        .scenarios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 3rem; }
+        .scenario-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .scenario-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .scenario-title { color: var(--accent); font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .scenario-text { font-size: 1.1rem; margin-bottom: 8px; color: #fff; }
+        .scenario-pt { color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-bottom: 10px; }
+        .scenario-context { font-size: 0.8rem; color: var(--power-color); background: rgba(0, 204, 255, 0.1); padding: 4px 8px; border-radius: 4px; display: inline-block; }
+
+        /* Exercise Section */
+        .exercise-section {
+            background: linear-gradient(145deg, #1a1a1a, #222);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+        .prompt { font-size: 1.2rem; margin-bottom: 1.5rem; color: #fff; }
         .input-area {
             width: 100%;
             max-width: 500px;
-            padding: 15px;
-            background: rgba(255,255,255,0.05);
+            padding: 12px;
+            background: #000;
             border: 1px solid var(--border);
-            border-radius: 8px;
             color: #fff;
+            border-radius: 6px;
             font-size: 1rem;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
         .input-area:focus { outline: none; border-color: var(--accent); }
         .check-btn {
             background: var(--accent);
             color: #000;
             border: none;
-            padding: 12px 30px;
+            padding: 10px 30px;
             border-radius: 6px;
             font-weight: bold;
             cursor: pointer;
             font-size: 1rem;
-            transition: transform 0.2s;
+            transition: transform 0.1s;
         }
         .check-btn:hover { transform: scale(1.05); }
-        .feedback { margin-top: 15px; font-weight: bold; min-height: 24px; }
+        .feedback { margin-top: 1rem; font-weight: bold; min-height: 24px; }
         .feedback.success { color: var(--accent); }
         .feedback.error { color: var(--error); }
+
+        /* Footer Section */
+        .final-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .final-question {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .standalone-exercise {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+        .standalone-label { display: block; margin-bottom: 10px; color: var(--text-muted); }
+        .ref-table-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .ref-title { color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
 
     </style>
 </head>
@@ -230,7 +287,17 @@
     <header>
         <h1>Lego Disruptive Block Chain</h1>
         <div class="subtitle">by Daby</div>
-        <p class="mission-text">I am training you to speak a real, polite, diplomatic, professional and international business English. Take it!</p>
+
+        <div class="mission-text">
+            "I am not teaching you English, I am showing you how to speak"
+        </div>
+        <div class="tagline">Perfect practice makes perfect.</div>
+
+        <div class="immersion-tip">
+            <p style="color: #00ff9d">Tip: Please understand well the situation</p>
+            <p style="color: #00ccff">and feel it in real life</p>
+            <p style="color: #ffcc00">then it will be an immersion.</p>
+        </div>
     </header>
 
     <div class="nav-container">
@@ -239,74 +306,111 @@
     </div>
 
     <div id="content-area" class="content-container">
-        <!-- Content injected via JS -->
+        <!-- Content injected by JS -->
     </div>
+
+    <footer class="final-section">
+        <h3 class="final-question">Now, will you use this expression?</h3>
+
+        <div class="standalone-exercise">
+            <label class="standalone-label">Standalone Exercise: Describe a situation or write a full sentence.</label>
+            <input type="text" class="input-area" placeholder="Type your sentence here...">
+        </div>
+
+        <div class="ref-table-container">
+            <div class="ref-title">Diplomatic Reference (Real Brazilian Context)</div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Real Portuguese (Brazil)</th>
+                        <th>English Equivalent</th>
+                        <th>Synonym</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"Pelo que eu entendi..." / "A impressão que dá..."</td>
+                        <td>It seems that...</td>
+                        <td>It appears that...</td>
+                    </tr>
+                    <tr>
+                        <td>"Só um parênteses..." / "Pegando um gancho..."</td>
+                        <td>Sorry to interrupt...</td>
+                        <td>May I add something?</td>
+                    </tr>
+                    <tr>
+                        <td>"Houve um ruído na comunicação."</td>
+                        <td>It seems there is a misunderstanding.</td>
+                        <td>We might be misaligned.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </footer>
 
     <script>
         const lessonData = {
             'tech-trouble': {
-                title: "Technical Difficulties",
-                why: "Technical issues happen. The goal is to handle them professionally without blaming the other person or panicking.",
+                title: "Tech Trouble & Interruptions",
+                why: "Technical issues happen. How you handle them defines your professionalism.",
                 diagramCode: `graph TD
-                  A[Issue Detected] --> B{Is it you or them?}
-                  B -->|You| C[Apologize & Act]
-                  B -->|Them| D[Notify Politely]
-
-                  C --> C1["'My connection is unstable'"]
-                  C --> C2["'I might have to reconnect'"]
-
-                  D --> D1["'You are breaking up'"]
-                  D --> D2["'We lost you for a second'"]
-
-                  style A fill:#ffcc00,color:#000
-                  style C fill:#ff4d4d,color:#fff
-                  style D fill:#00ff9d,color:#000
-                `,
-                table: {
-                    headers: ["Situation", "Casual / Common", "Formal / Technical", "Contexto (PT)"],
-                    rows: [
-                        ["General Bad Internet", "\"My Wi-Fi is acting up.\"", "\"The connection is unstable.\"", "Quando a internet está estranha/lenta."],
-                        ["Intermittent Signal", "\"It's in and out.\"", "\"The service is intermittent.\"", "Sinal oscilando (vai e volta)."],
-                        ["Slow Response", "\"I'm lagging.\"", "\"I'm experiencing high latency.\"", "Delay entre fala e imagem."],
-                        ["Disconnection", "\"It keeps dropping.\"", "\"We have a connectivity issue.\"", "Caiu a conexão."],
-                        ["Audio Issue", "\"You're breaking up.\"", "\"The audio quality is degraded.\"", "Voz cortada/robótica."],
-                        ["Video Issue", "\"You are freezing.\"", "\"The video is buffering.\"", "Imagem travada."],
-                        ["Can't Hear", "\"I can barely hear you.\"", "\"The audio is faint/distorted.\"", "Volume baixo ou ruído."]
-                    ]
-                },
+                  A[Connection Issue] -->|Audio Cutting| B("Sorry to interrupt...")
+                  A -->|Video Freezing| C("We lost you for a second...")
+                  B --> D{Suggestion}
+                  C --> D
+                  D -->|Bandwidth| E[Turn off camera]
+                  D -->|Glitch| F[Could you repeat?]
+                  style A fill:#ff4d4d,color:#fff
+                  style D fill:#00ff9d,color:#000`,
+                frozenTable: [
+                    { situation: "Whole screen stops", english: "The video is frozen.", pt: "[A imagem travou geral]" },
+                    { situation: "Person stops moving", english: "You are frozen.", pt: "[Você travou]" },
+                    { situation: "Audio cutting", english: "Your audio is breaking up.", pt: "[Seu áudio está cortando]" },
+                    { situation: "Lag / Delay", english: "There is a lag.", pt: "[Tem um delay/atraso]" },
+                    { situation: "Robotic Voice", english: "You sound robotic.", pt: "[Sua voz está robotizada]" },
+                    { situation: "Glitch / Artifacts", english: "There was a glitch.", pt: "[Deu um bug/falha rápida]" },
+                    { situation: "Reset Router", english: "I need to reset my router.", pt: "[Vou reiniciar o modem]" },
+                    { situation: "Restart PC", english: "I'm going to restart my machine.", pt: "[Vou reiniciar o computador]" },
+                    { situation: "IT Support", english: "I'll open a ticket with IT.", pt: "[Vou abrir um chamado na TI]" },
+                    { situation: "Presentation stops", english: "The presentation dropped.", pt: "[A apresentação caiu]" },
+                    { situation: "Background Noise", english: "There is some background noise.", pt: "[Tem ruído no fundo]" },
+                    { situation: "Mute Status", english: "You are on mute / Please unmute.", pt: "[Você está no mudo / Tira do mudo]" },
+                    { situation: "Screen Sharing", english: "I'm sharing my screen.", pt: "[Estou compartilhando a tela]" },
+                    { situation: "Browser fix", english: "I'll close and reopen the tab.", pt: "[Vou fechar e abrir a aba]" }
+                ],
                 scenarios: [
                     {
                         title: "The Polite Interruption",
-                        text: "Sorry to interrupt, but you're breaking up a little bit. Could you repeat that last part?",
-                        pt: "Desculpe interromper, mas sua voz está cortando um pouco. Pode repetir?",
-                        context: "Use 'Sorry to interrupt' to be polite."
+                        text: "Sorry to interrupt, Daby, but your audio is breaking up.",
+                        pt: "Desculpe interromper, Daby, mas seu áudio está cortando.",
+                        context: "Use when you must stop someone speaking."
                     },
                     {
                         title: "The Suggestion",
-                        text: "I think we have a slight lag. Maybe turning off the camera will help the bandwidth.",
-                        pt: "Acho que temos um pequeno delay. Talvez desligar a câmera ajude na conexão.",
-                        context: "Blame the 'bandwidth', not the person."
+                        text: "It seems the bandwidth is low. Maybe we could turn off the camera?",
+                        pt: "Parece que a banda está baixa. Talvez possamos desligar a câmera?",
+                        context: "Proposing a fix without demanding it."
                     },
                     {
                         title: "The Confirmation",
-                        text: "We lost you for a second there. You were frozen.",
-                        pt: "Te perdemos por um segundo. Você travou.",
-                        context: "Confirming why you didn't hear them."
+                        text: "Could you please repeat that last part? The call dropped for a second.",
+                        pt: "Poderia repetir a última parte? A ligação caiu por um segundo.",
+                        context: "Asking for repetition without blaming them."
                     }
                 ],
                 exercise: {
-                    prompt: "Your colleague's video is stuck. What do you say politely?",
-                    keywords: ["frozen", "freezing", "video", "buffering"],
-                    successMsg: "Perfect! You identified the video issue politely.",
-                    failMsg: "Try using 'frozen' or 'buffering' to describe the video."
+                    prompt: "Your boss's screen froze. Tell them politely.",
+                    keywords: ["froze", "frozen", "seems", "video"],
+                    successMsg: "Perfect! You alerted them without being rude.",
+                    failMsg: "Try using 'It seems' or 'froze' politely."
                 }
             },
             'it-seems': {
                 title: "The Power of 'It Seems That...'",
-                why: "In English, being direct can sound rude. 'It seems that' is your tool to soften bad news, point out mistakes without blaming, and make polite suggestions.",
+                why: "Direct accusations create conflict. 'It seems' creates cooperation.",
                 brazilTip: {
                     title: "Escudo Diplomático",
-                    text: "Nós, brasileiros, tendemos a ser diretos ou usar 'I think' (Eu acho). Em ambientes corporativos globais, 'It seems' é o seu <b>Escudo Diplomático</b>. Ele transforma uma acusação ('Você errou') em uma observação neutra ('Parece que há um erro'). Use isso para corrigir chefes, clientes ou colegas sem criar conflito."
+                    text: "Brasileiros, atenção: 'You made a mistake' soa como um ataque pessoal. 'It seems there is a mistake' foca no problema, não na pessoa. É a sua ferramenta nº 1 para corrigir chefes e clientes sem ofender."
                 },
                 diagrams: [
                     `graph LR
@@ -314,13 +418,13 @@
                       style B fill:#ff4d4d,color:#fff
 
                       C["Diplomatic: 'It seems...'"] -->|Deflects| D{The Shield}
-                      D -->|Focus on| E["The Problem"]
+                      D -->|Focus on| E[The Problem]
                       style D fill:#00ccff,color:#000
                       style E fill:#00ff9d,color:#000
                     `,
                     `graph TD
                       A[Observation] --> B{"It seems that..."}
-                      B --> C["Fact/Situation"]
+                      B --> C[Fact/Situation]
                       style A fill:#ffcc00,color:#000
                       style B fill:#00ff9d,color:#000
                     `,
@@ -432,6 +536,27 @@
                 `;
             }
 
+            // Generate Neon Frozen Table (if exists)
+            let frozenHTML = '';
+            if (data.frozenTable) {
+                const rows = data.frozenTable.map(row => `
+                    <tr>
+                        <td class="neon-situation">${row.situation}</td>
+                        <td class="neon-english">${row.english}</td>
+                        <td class="neon-pt">${row.pt}</td>
+                    </tr>
+                `).join('');
+
+                frozenHTML = `
+                    <div class="neon-table-container">
+                        <div class="neon-title">Tech Trouble Nuances</div>
+                        <table class="neon-table">
+                            ${rows}
+                        </table>
+                    </div>
+                `;
+            }
+
             // Handle Diagrams (Single or Multiple)
             let diagramsHTML = '';
             if (data.diagrams) {
@@ -465,6 +590,7 @@
                     ${brazilHTML}
                     ${diagramsHTML}
                     ${tableHTML}
+                    ${frozenHTML}
                 </div>
 
                 <div class="scenarios-grid">
